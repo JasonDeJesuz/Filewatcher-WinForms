@@ -1,0 +1,10 @@
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\bin\Debug\Filewatcher-WinForms.exe.config
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\bin\Debug\Filewatcher-WinForms.exe
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\bin\Debug\Filewatcher-WinForms.pdb
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.csprojAssemblyReference.cache
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher_WinForms.Form1.resources
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher_WinForms.Properties.Resources.resources
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.csproj.GenerateResource.cache
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.csproj.CoreCompileInputs.cache
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.exe
+C:\Users\JasonD\Desktop\filewatcher-winForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.pdb
