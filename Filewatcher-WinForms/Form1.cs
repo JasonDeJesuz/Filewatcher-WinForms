@@ -143,7 +143,6 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
 
             fileSystemWatcher.NotifyFilter = NotifyFilters.FileName |
                 NotifyFilters.LastWrite |
-                NotifyFilters.Size |
                 NotifyFilters.DirectoryName;
 
 
@@ -199,7 +198,7 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
                 BeginInvoke(new Action(() => { AddListLine(string.Format("{0} -> {1} - {2}", watcherChangeTypes.ToString(), name, DateTime.Now), watcherChangeTypes.ToString()); }));
             }
         }
-        // Disolaying the text inside of the listbox and show the popup
+        // Displaying the text inside of the listbox and show the popup
         public void AddListLine(string text, string type)
         {
             this.listBox1.Items.Add(text);
