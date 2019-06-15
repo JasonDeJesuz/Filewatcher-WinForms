@@ -27,6 +27,9 @@ namespace Filewatcher_WinForms
 new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
 
+        //our popuatetreeview method will specify where the application will start populating the treeview from, in this case we used desktop.
+        //Due to rights and complications we could not get the C drive to be watched as we can see in the commented lines.
+        //Beacause we are using treeviews we will need to associate nodes, we use nodes to get the directories and know where the application should look at and which files to use.
         private void PopulateTreeView()
         {
             
@@ -44,6 +47,7 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             }
         }
 
+        //This is a method we use accross all of the other 2 methods that we use, this will serve as a shared method for getting our main directories.
         private void GetDirectories(DirectoryInfo[] subDirs, TreeNode nodeToAddTo)
         {
             TreeNode aNode;
@@ -63,7 +67,9 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             }
         }
 
-        
+        //when the user clicks on the treeview items we initialize this method, this method will make sure we receive all of the subdirectories and the files inside of the directory
+        //when the program receives them it adds each subdirectory folder to the listview as well as the files after that.
+        //in the designer we created the columns Name, Type and last Modified - in the method we get the Name, Type and Last Modified from each of the files and then include it in the application
         void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             TreeNode newSelected = e.Node;
@@ -117,6 +123,9 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             Application.Exit();
         }
 
+        //The StartFileSystemWatcher method is started when the Start Monitoring button is clicked, the method will use the path defined by the nodemouseclick event.
+        //When the path is empty we simple return out of the thread, this will cause the monitoring system to not run the thread, yet we know that the directories are always displayed to the user thus
+        //we can confirm that there will always be directories that exist.
         FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
         private void StartFileSystemWatcher()
         {
@@ -138,16 +147,13 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
                 NotifyFilters.DirectoryName;
 
 
-            // Event handlers that are watching for specific event
+            // All event handlers we will be monitoring during the runtime
             fileSystemWatcher.Created += new FileSystemEventHandler(OnCreate);
             fileSystemWatcher.Changed += new FileSystemEventHandler(OnChanged);
             fileSystemWatcher.Deleted += new FileSystemEventHandler(OnDelete);
             fileSystemWatcher.Renamed += new RenamedEventHandler(OnRenamed);
 
-            // NOTE: If you want to monitor specified files in folder, you can use this filter
-            // fileSystemWatcher.Filter
-
-            // START watching
+            //Starting our filesystemwatcher and have it run in the background.
             fileSystemWatcher.EnableRaisingEvents = true;
         }
 
@@ -179,6 +185,9 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             DisplayFileSystemWatcherInfo(e.ChangeType, e.Name);
         }
 
+        //Because we are using different threads for the back-end filesystemwatcher we will not be able to just add the text to the listbox, we will have to use something like
+        //BeginInvoke in order to call a method to add the text to the listbox.
+        //Below we  use the BeginInvoke to send an action to a method to add the text to the listbox and display the popup.
         private void DisplayFileSystemWatcherInfo(WatcherChangeTypes watcherChangeTypes, string name, string oldName = null)
         {
             if (watcherChangeTypes == WatcherChangeTypes.Renamed)
@@ -190,6 +199,7 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
                 BeginInvoke(new Action(() => { AddListLine(string.Format("{0} -> {1} - {2}", watcherChangeTypes.ToString(), name, DateTime.Now), watcherChangeTypes.ToString()); }));
             }
         }
+        // Disolaying the text inside of the listbox and show the popup
         public void AddListLine(string text, string type)
         {
             this.listBox1.Items.Add(text);
