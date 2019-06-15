@@ -20,3 +20,5 @@ C:\Users\Hades\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\obj\Debug\Filew
 C:\Users\Hades\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.pdb
 C:\Users\Hades\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\bin\Debug\Tulpep.NotificationWindow.dll
 C:\Users\Hades\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.csproj.CopyComplete
+C:\Users\JasonD\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\JasonD\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\obj\Debug\Filewatcher-WinForms.csproj.CopyComplete

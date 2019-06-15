@@ -16,6 +16,9 @@ namespace Filewatcher_WinForms
 {
     public partial class Form1 : Form
     {
+        public string path;
+        public string projectpath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+
         public Form1()
         {
             InitializeComponent();
@@ -60,7 +63,7 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             }
         }
 
-        public string path;
+        
         void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             TreeNode newSelected = e.Node;
@@ -194,7 +197,7 @@ new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             PopupNotifier pop = new PopupNotifier();
             pop.TitleText = "A file has been " + type;
             pop.ContentText = text;
-            pop.Image = Image.FromFile(@"C:\Users\Hades\Desktop\Filewatcher-WinForms\Filewatcher-WinForms\assets\infoinfo.png");
+            pop.Image = Image.FromFile(projectpath + @"\assets\infoinfo.png");
             pop.ImageSize = new Size(100, 100);
             pop.Popup();
         }
