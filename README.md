@@ -74,7 +74,7 @@ The Application will only have one form where the directories and events are goi
 with relevant buttons that handle the events.
 In the above photo you will see that there are a total of 3 buttons, the idea is to have all 3 buttons
 trigger different events.
-![alt text](https://drive.google.com/file/d/1p42VTf8HlCWTmGzIVv3rh_hlKKzsVRQ5/view?usp=sharing)
+![alt text](https://github.com/BroSnuffles/Filewatcher-WinForms/Assets/monitor.PNG)
 - Monitor button
   - The monitor button will trigger the StartFileSystemWatcher() method, in the
       method we will watch the specified directory that is currently being viewed by the
