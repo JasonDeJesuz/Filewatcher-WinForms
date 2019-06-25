@@ -67,13 +67,14 @@ large enough to not miss any file change events. To avoid a buffer overflow, use
 the NotifyFilter and IncludeSubdirectories properties so you can filter out unwanted change
 notifications.
 
-Design
+**Design**
 After designing the form, we took a screenshot of the front-end design, before implementing the
 back-end coding to handle the events required.
 The Application will only have one form where the directories and events are going to be displayed
 with relevant buttons that handle the events.
 In the above photo you will see that there are a total of 3 buttons, the idea is to have all 3 buttons
 trigger different events.
+![alt text](https://drive.google.com/file/d/1p42VTf8HlCWTmGzIVv3rh_hlKKzsVRQ5/view?usp=sharing)
 - Monitor button
   - The monitor button will trigger the StartFileSystemWatcher() method, in the
       method we will watch the specified directory that is currently being viewed by the
