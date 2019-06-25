@@ -4,11 +4,6 @@ THe filewatcher has been created to watch files in a selected directory.
 In the README.md, you will find a before report of the project and a after report of the project.
 
 # Scenario
-YOu are required to create a Windows Forms Application that can monitor a given directory on the computer’s hard drive. The user of the application should easily be able to browse to a specific folder on  the  computer  through  the  use  of  your  application  and  select  the  folder  to  monitor.  The  user should be able to choose when the application should start monitoring the chosen directory.All changes made in the specified directory (File creation, renaming, deleting and any other possible changes) needs to be recorded from your application, all of these changes need to be displayed on the form. As soon as a change is made in that directory, a notification should also be displayed at the bottom right corner of the screen of the computer that is running the application. The user should also have an option to include subdirectories of the directory they selected to also be monitored.
-
-# Milestone 1
-
-## Introduction
 We are required to create a Windows Forms Application that can monitor a given directory on the
 computer’s hard drive. The user of the application should easily be able to browse to a specific
 folder on the computer through the use of your application and select the folder to monitor.
@@ -21,6 +16,8 @@ the form. As soon as a change is made in that directory, a notification should a
 bottom right corner of the screen of the computer that is running the application.
 The user should also have an option to include subdirectories of the directory they selected to also
 be monitored.
+
+## Introduction
 Flowchart 
 Topics The project will be built using extensive research and knowledge in the following topics.
   • FileSystemWatcher
