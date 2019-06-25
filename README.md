@@ -8,7 +8,7 @@ YOu are required to create a Windows Forms Application that can monitor a given 
 
 # Milestone 1
 
-Introduction
+##Introduction
 We are required to create a Windows Forms Application that can monitor a given directory on the
 computer’s hard drive. The user of the application should easily be able to browse to a specific
 folder on the computer through the use of your application and select the folder to monitor.
@@ -26,19 +26,19 @@ Topics The project will be built using extensive research and knowledge in the f
   • FileSystemWatcher
   • Windows Forms
   
-FileSystemWatcher Class
+**FileSystemWatcher Class**
 The FileSystemWatcher class listens to the file system change notifications and will then raise events
 when a directory, or file inside of a directory, changes.
 There are some key important points to remember when using the FileSystemWatcher class.
-  • Hidden files are not ignored.
-  • In some systems, FileSystemWatcher reports changes to files using the short 8.3 file name
+-Hidden files are not ignored.
+-In some systems, FileSystemWatcher reports changes to files using the short 8.3 file name
     format. For example, a change to "LongFileName.LongExtension" could be reported as
     "LongFil~.Lon".
-  • This class contains a link demand and an inheritance demand at the class level that applies
+-This class contains a link demand and an inheritance demand at the class level that applies
     to all members. A SecurityException is thrown when either the immediate caller or the
     derived class does not have full-trust permission. For details about security demands, see
     Link Demands.
-  • The maximum size you can set for the InternalBufferSize property for monitoring a directory
+-The maximum size you can set for the InternalBufferSize property for monitoring a directory
     over the network is 64 KB.
     
 Use FileSystemWatcher to watch for changes in a specified directory. You can watch for changes in
