@@ -8,7 +8,7 @@ YOu are required to create a Windows Forms Application that can monitor a given 
 
 # Milestone 1
 
-##Introduction
+## Introduction
 We are required to create a Windows Forms Application that can monitor a given directory on the
 computer’s hard drive. The user of the application should easily be able to browse to a specific
 folder on the computer through the use of your application and select the folder to monitor.
@@ -31,14 +31,14 @@ The FileSystemWatcher class listens to the file system change notifications and 
 when a directory, or file inside of a directory, changes.
 There are some key important points to remember when using the FileSystemWatcher class.
 -Hidden files are not ignored.
--In some systems, FileSystemWatcher reports changes to files using the short 8.3 file name
+- In some systems, FileSystemWatcher reports changes to files using the short 8.3 file name
     format. For example, a change to "LongFileName.LongExtension" could be reported as
     "LongFil~.Lon".
--This class contains a link demand and an inheritance demand at the class level that applies
+- This class contains a link demand and an inheritance demand at the class level that applies
     to all members. A SecurityException is thrown when either the immediate caller or the
     derived class does not have full-trust permission. For details about security demands, see
     Link Demands.
--The maximum size you can set for the InternalBufferSize property for monitoring a directory
+- The maximum size you can set for the InternalBufferSize property for monitoring a directory
     over the network is 64 KB.
     
 Use FileSystemWatcher to watch for changes in a specified directory. You can watch for changes in
@@ -74,13 +74,13 @@ The Application will only have one form where the directories and events are goi
 with relevant buttons that handle the events.
 In the above photo you will see that there are a total of 3 buttons, the idea is to have all 3 buttons
 trigger different events.
-  • Monitor button
-    o The monitor button will trigger the StartFileSystemWatcher() method, in the
+- Monitor button
+  - The monitor button will trigger the StartFileSystemWatcher() method, in the
       method we will watch the specified directory that is currently being viewed by the
       user inside of the Application.
-  • Stop Monitoring button
-    o The stop monitoring button will trigger the StopFileSystemWatcher() method, in the
+- Stop Monitoring button
+  - The stop monitoring button will trigger the StopFileSystemWatcher() method, in the
       method we will stop the FileSystemWatcher.
-  • Exit button
-    o The exit button will serve the same purpose as the red x button at the top right
+- Exit button
+  - The exit button will serve the same purpose as the red x button at the top right
       corner of the application, it will allow the user to quit the application safely.
